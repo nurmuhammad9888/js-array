@@ -1,47 +1,20 @@
-// const apple = prompt("Ehtyoriy son kriting")
 
-
-// let apples = ""
-
-// for(let i = apple.length -1; i >=0; i--){
-//     apples += apple[i]
-// }
-
-// console.log(apples);
-
-
-// console.log(apple.split("").reverse().join(""));
-
-
-// const mainFunction = (x) =>{
-//     document.querySelector(`${x}`)
-// }
-// console.log(mainFunction);
-
-
-// let funcsion = (array) =>{
-
-//     array.array.forEach(element => {
-
-//     });
-// }
-// console.log(funcsion());
-// let func = ([0.3,3.2, 2.2]);
 
 const elForm =  document.querySelector(".form-js");
 const elFormInput =  document.querySelector(".input-js");
 const elFormList =  document.querySelector(".list");
 const elBtn = document.querySelector(".btn-js");
 
-let array = []
-
+let array = [];
 
 elForm.addEventListener("submit", (evt) =>{
     evt.preventDefault();
+
     let obj = {
         number:"",
         textt:elFormInput.value
     }
+    
     elForm.reset()
     elFormList.textContent = "";
     
@@ -50,7 +23,7 @@ elForm.addEventListener("submit", (evt) =>{
     for (let i = 0; i < array.length; i++) {
         
         const item = document.createElement("li");
-        item.classList.add("flex", "bg-[#fff]", "px-3", "mr-4","py-2","items-center", "md:max-w-[420px]","mt-5", "w-full", " .")
+        item.classList.add("flex", "bg-[#fff]", "px-3", "mr-4","py-2","items-center", "md:max-w-[420px]","mt-5", "w-full", "justify-between")
         
         array[i].number = i + 1
         const number = document.createElement("span");
